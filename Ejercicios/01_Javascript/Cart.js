@@ -14,4 +14,9 @@ export default class ProductManager {
 	getProductsById(id) {
 		return this.products.find((product) => product.id === id);
 	}
+
+	removeProductsById(id) {
+		this.products = this.products.filter((product) => product.code !== id);
+		return this.products;
+	}
 }
