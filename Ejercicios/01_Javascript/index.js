@@ -16,6 +16,6 @@ cart.addProduct(p4);
 const p5 = new Products("Azucar", 500, 5, "imagen5", 50);
 
 cart.addProduct(p5);
-console.table(cart.getProducts());
+console.log(cart.getProducts());
 
 console.log(cart.getTotal());
