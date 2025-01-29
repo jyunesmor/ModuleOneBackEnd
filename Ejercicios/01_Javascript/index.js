@@ -3,14 +3,19 @@ import Products from "./Product.js";
 
 const cart = new ProductManager();
 
-const p1 = new Products("Carne", 245, "image1", 1, 36);
-const p2 = new Products("Leche", 378, "image2", 2, 24);
-const p3 = new Products("Aceite", 1489, "image3", 3, 47);
+const p1 = new Products("Carnes", 100, 1, "imagen1", 10);
+const p2 = new Products("Aceite", 200, 2, "imagen2", 20);
+const p3 = new Products("Leche", 300, 3, "imagen3", 30);
+const p4 = new Products("Pan", 400, 4, "imagen4", 40);
 
 cart.addProduct(p1);
 cart.addProduct(p2);
 cart.addProduct(p3);
+cart.addProduct(p4);
 
-cart.removeProductsById(2);
+const p5 = new Products("Azucar", 500, 5, "imagen5", 50);
 
+cart.addProduct(p5);
 console.table(cart.getProducts());
+
+console.log(cart.getTotal());
